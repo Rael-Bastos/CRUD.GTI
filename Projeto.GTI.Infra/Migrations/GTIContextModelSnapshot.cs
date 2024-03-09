@@ -33,7 +33,7 @@ namespace Projeto.GTI.Infra.Migrations
                     b.Property<string>("CPF")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DataExpedicao")
+                    b.Property<DateTime?>("DataExpedicao")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataNascimento")

@@ -20,7 +20,7 @@ namespace Projeto.GTI.Infra.Migrations
                     CPF = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RG = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DataExpedicao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataExpedicao = table.Column<DateTime>(type: "datetime2", nullable: true),
                     OrgaoExpedicao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UFExpedicao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),

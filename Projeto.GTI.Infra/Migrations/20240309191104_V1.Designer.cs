@@ -12,7 +12,7 @@ using Projeto.GTI.Infra.Context;
 namespace Projeto.GTI.Infra.Migrations
 {
     [DbContext(typeof(GTIContext))]
-    [Migration("20240308150626_V1")]
+    [Migration("20240309191104_V1")]
     partial class V1
     {
         /// <inheritdoc />
@@ -36,7 +36,7 @@ namespace Projeto.GTI.Infra.Migrations
                     b.Property<string>("CPF")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DataExpedicao")
+                    b.Property<DateTime?>("DataExpedicao")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataNascimento")
