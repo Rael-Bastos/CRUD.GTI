@@ -38,7 +38,7 @@
             <label class="col-md-6 control-label" for="dtExpedicao">Data Expedição</label>
             <div class="col-md-12">
                 <input id="dtExpedicao" name="dtExpedicao" placeholder="" class="form-control input-md" required=""
-                       type="date" value="@Model.DataExpedicao" disabled>
+                       type="date" value="@Model.DataExpedicao?.ToString("yyyy-MM-dd")" disabled>
             </div>
         </div>
         <div class="col-md-3">
@@ -62,7 +62,7 @@
             <label class="col-md-8 control-label" for="dtNascimento">Data Nascimento *</label>
             <div class="col-md-12">
                 <input id="dtNascimento" name="dtNascimento" placeholder="" class="form-control input-md" required="" type="date"
-                       value="@Model.DataNascimento" disabled>
+                       value="@Model.DataNascimento.ToString("yyyy-MM-dd")" disabled>
             </div>
         </div>
         <div class="col-md-3">
