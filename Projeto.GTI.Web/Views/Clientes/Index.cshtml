@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+@model IEnumerable<Projeto.GTI.Web.Models.ClienteViewModelResponse>
+
+
+<p>
+    @Html.ActionLink("Adicionar Cliente", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataExpedicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrgaoExpedicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UFExpedicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoCivil)
+        </th>
+        <th></th>
+    </tr>
+
+    @if (Model != null) foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataExpedicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgaoExpedicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UFExpedicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCivil)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdCliente }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdCliente }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdCliente })
+            </td>
+        </tr>
+    }
+
+</table>

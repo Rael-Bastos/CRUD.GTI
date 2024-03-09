@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+@model Projeto.GTI.Web.Models.ClienteViewModel
+
+<div class="card-title">
+    <h4>
+        Cliente
+    </h4>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-2">
+            <label class="col-md-6 control-label" for="Cpf">CPF <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="Cpf" name="Cpf" placeholder="000.000.000-00" class="form-control input-md" required="" type="text" onkeypress="$(this).mask('000.000.000-00');">
+            </div>
+        </div>
+        <div class="col-md-10">
+            <label class="col-md-6 control-label" for="Nome">Nome <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label class="col-md-6 control-label" for="Rg">RG</label>
+            <div class="col-md-12">
+                <input id="Rg" name="Rg" placeholder="00.000.000-00" class="form-control input-md" required="" type="text" onkeypress="$(this).mask('00.000.000-00');">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-6 control-label" for="dtExpedicao">Data Expedição</label>
+            <div class="col-md-12">
+                <input id="dtExpedicao" name="dtExpedicao" placeholder="" class="form-control input-md" required="" type="date">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-8 control-label" for="dtExpedicao">Órgão Expedição</label>
+            <div class="col-md-12">
+                <select id="inputEstado" class="form-control" >
+                    <option selected>Escolher...</option>
+                    <option>SSP</option>
+                    <option>Detran</option>
+                    <option>PF</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-6 control-label" for="ufExpedicao">Uf Expedição</label>
+            <div class="col-md-12">
+                <select id="inputUfEx" class="form-control">
+                    <option selected>Escolher...</option>
+                    <option>SP</option>
+                    <option>RJ</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label class="col-md-8 control-label" for="dtNascimento">Data Nascimento *</label>
+            <div class="col-md-12">
+                <input id="dtNascimento" name="dtNascimento" placeholder="" class="form-control input-md" required="" type="date">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-8 control-label" for="sexo">Sexo<h11>*</h11></label>
+            <div class="col-md-12">
+                <select id="inputSexo" class="form-control">
+                    <option selected>Escolher...</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-6 control-label" for="estadocivil">Estado Civil<h11>*</h11></label>
+            <div class="col-md-12">
+                <select id="inputEstadoCivil" class="form-control">
+                    <option selected>Escolher...</option>
+                    <option>Solteiro</option>
+                    <option>Casado</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card-title">
+    <h4>
+        Endereço
+    </h4>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-2">
+            <label class="col-md-6 control-label" for="cep">Cep <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="cep" name="cep" placeholder="00000-000" class="form-control input-md" required="" type="text" onkeypress="$(this).mask('00000-000');">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label class="col-md-6 control-label" for="logradouro">Rua <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="logradouro" name="logradouro" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <label class="col-md-6 control-label" for="nr">Nr <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="nr" name="nr" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label class="col-md-6 control-label" for="complemento">Complemento </label>
+            <div class="col-md-12">
+                <input id="complemento" name="complemento" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label class="col-md-8 control-label" for="bairro">Bairro <h11>*</h11></label>
+            <div class="col-md-12">
+                <input id="bairro" name="bairro" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>        
+        <div class="col-md-2">
+            <label class="col-md-8 control-label" for="cidade">Cidade</label>
+            <div class="col-md-12">
+                <input id="cidade" name="cidade" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <label class="col-md-6 control-label" for="uf">Uf<h11>*</h11></label>
+            <div class="col-md-12">
+                <select id="inputUf" class="form-control">
+                    <option>SP</option>
+                    <option>RJ</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-danger fade hide" role="alert">
+    Os Campos com * são obrigatorios.
+</div>
+<div class="row">
+    <div class="col-md-8"></div>
+    <button type="button" class="col-md-2 btn btn-success" onclick="cliente.Salvar()">Salvar</button>
+    <button type="button" class="col-md-2 btn btn-danger" onclick="cliente.TelaListagem()">Cancelar</button>
+   
+</div>
